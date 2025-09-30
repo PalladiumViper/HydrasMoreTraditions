@@ -416,7 +416,7 @@ MT_situation_ruination_spiteful_reclamations = {
 				}
 			}
 		}
-		job_scrap_miner_add = 1
+		job_miner_add = 100
 		mult = target.value:MT_half_planet_size
 	}
 	triggered_target_modifier = {
@@ -428,7 +428,7 @@ MT_situation_ruination_spiteful_reclamations = {
 				}
 			}
 		}
-		job_scrap_miner_drone_add = 1
+		job_mining_drone_add = 100
 		mult = target.trigger:planet_size
 	}
 	triggered_target_modifier = {
@@ -441,7 +441,7 @@ MT_situation_ruination_spiteful_reclamations = {
 				}
 			}
 		}
-		job_scrap_miner_drone_add = 1
+		job_mining_drone_add = 100
 		mult = target.value:MT_half_planet_size
 	}
 	on_start = {

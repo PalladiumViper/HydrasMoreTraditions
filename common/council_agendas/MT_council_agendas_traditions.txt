@@ -1397,14 +1397,14 @@ agenda_MT_botany = {
 		has_tradition = tr_mt_botany_adopt
 	}
 	modifier = {
-		planet_farmers_food_produces_mult = -0.1
+		planet_farmers_food_produces_mult = -0.5
 	}
 	effect = {
 		custom_tooltip = council_agenda_agenda_MT_botany_effect_desc
         add_resource = {
-            physics_research = 100
-           	society_research = 100
-        	engineering_research = 100
+            physics_research = 1
+           	society_research = 1
+        	engineering_research = 1
             mult = value:MT_num_farmers
         }
 	}
@@ -1420,14 +1420,14 @@ agenda_MT_botany_angler = {
 		has_tradition = tr_mt_botany_adopt
 	}
 	modifier = {
-		planet_farmers_food_produces_mult = -0.1
+		planet_farmers_food_produces_mult = -0.5
 	}
 	effect = {
 		custom_tooltip = council_agenda_agenda_MT_botany_angler_effect_desc
         add_resource = {
-            physics_research = 200
-           	society_research = 200
-        	engineering_research = 200
+            physics_research = 2
+           	society_research = 2
+        	engineering_research = 2
             mult = value:MT_num_anglers
         }
 	}

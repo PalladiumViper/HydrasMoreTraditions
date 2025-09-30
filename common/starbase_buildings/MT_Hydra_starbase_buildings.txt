@@ -78,6 +78,11 @@ mt_starbase_energy_beaming = {
 				first = solar_panel_network
 				second = mt_starbase_energy_beaming
 			}
+			has_starbase_module = astromining_bay
+			starbase_buildable_is_in_queue_before = {
+				first = astromining_bay
+				second = mt_starbase_energy_beaming
+			}
 		}
 	}
 
@@ -93,6 +98,14 @@ mt_starbase_energy_beaming = {
 			}
 			energy = 2
 			mult = value:num_starbase_modules_of_type|TYPE|solar_panel_network|
+		}
+		produces = {
+			trigger = {
+				hidden_trigger = { exists = this }
+				has_starbase_module = astromining_bay
+			}
+			energy = 2
+			mult = value:num_starbase_modules_of_type|TYPE|astromining_bay|
 		}
 	}
 

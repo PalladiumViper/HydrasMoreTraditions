@@ -473,3 +473,10 @@ Bugfixes:
 # 4.0.x Post-Wilderness-Beta Update
 Bugfixes:
 - district_*_max is now district_*_max_add.
+
+# 4.1.x Shadows of the Shroud Bugfix roundup
+Bugfixes: 
+- fixed botany agenda to match tooltip and rescaled for new pop numbers.
+- reenabled archaology event triggers.
+- Fixed ruination to use regular minor jobs instead of non-existent scrap miners.
+- Added astro-mining bays to the effects of the beaming array, so astro-mining drones can also benefit.

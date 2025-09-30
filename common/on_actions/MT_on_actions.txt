@@ -41,13 +41,13 @@ on_debris_scavenged_and_researched = {
 
 on_decade_pulse_country = {
 	events = {
-		#MT_events.4 # arcsite spawn
+		MT_events.4 # arcsite spawn
 	}
 }
 
 on_arch_site_finished = {
 	events = {
-		#MT_events.5 # Archaeology tradition
+		MT_events.5 # Archaeology tradition
 	}
 }
 
