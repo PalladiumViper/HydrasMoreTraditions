@@ -262,6 +262,7 @@ agenda_MT_starseeker_finish = {
 
 agenda_MT_desperation_finish = {
 	all_technology_research_speed = 0.2
+	dangerous_tech_draw_chance_mult = 0.5
 }
 
 agenda_MT_astronomy_finish = {
