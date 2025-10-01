@@ -1,191 +1,192 @@
-#tr_mt_maritime_adopt = { # Theme: War and Trade
-#	unlocks_agenda = agenda_MT_maritime # 
-#	custom_tooltip = tr_mt_maritime_adopt_desc # gain naval capacity equal to 10% of trade value
-#	triggered_modifier = {
-#		potential = { always = yes }
-#		country_naval_cap_mult = 0.01
-#		mult = value:mt_1_10_trade_value
-#	}
-#	
-#	on_enabled = {
-#		hidden_effect = {
-#			create_MT_situation_handler = yes
-#		}
-#	}
-#}
+tr_mt_maritime_adopt = { # Theme: War and Trade
+	unlocks_agenda = agenda_MT_maritime # 
+	custom_tooltip = tr_mt_maritime_adopt_desc # gain naval capacity equal to 10% of trade value
+	triggered_modifier = {
+		potential = { always = yes }
+		country_naval_cap_mult = 0.01
+		mult = value:mt_1_10_trade_value
+	}
+	
+	#on_enabled = {
+	#	hidden_effect = {
+	#		create_MT_situation_handler = yes
+	#	}
+	#}
+}
 #
 ## 
-#tr_mt_maritime_finish = {
-#	# Upgrade Agenda
-#	custom_tooltip_with_modifiers = tr_mt_maritime_finish_desc
-#	modifier = {
-#		country_enclave_capacity_add = 1
-#		ascension_perks_add = 1
-#	}
-#	
-#	on_enabled = {
-#		hidden_effect = {
-#			if = {
-#				limit = {
-#					has_agenda_selected = agenda_MT_maritime
-#				}
-#				set_variable = {
-#					which = MT_agenda_progress
-#					value = trigger:council_agenda_progress_percent
-#				}
-#				set_council_agenda = agenda_MT_maritime_upgraded
-#				add_council_agenda_progress_percent = MT_agenda_progress
-#				clear_variable = MT_agenda_progress
-#			}
-#		}
-#	}
-#	
-#	tradition_swap = {
-#		name = tr_mt_maritime_overlord_finish
-#		inherit_effects = no
-#		inherit_icon = yes
-#		inherit_name = yes
-#		trigger = {
-#			has_overlord_dlc = no
-#			has_paragon_dlc = yes
-#		}
-#		custom_tooltip_with_modifiers = tr_mt_maritime_finish_desc
-#		modifier = {
-#			country_starbase_capacity_add = 2
-#			ascension_perks_add = 1
-#		}
-#		on_enabled = {
-#			hidden_effect = {
-#				if = {
-#					limit = {
-#						has_agenda_selected = agenda_MT_maritime
-#					}
-#					set_variable = {
-#						which = MT_agenda_progress
-#						value = trigger:council_agenda_progress_percent
-#					}
-#					set_council_agenda = agenda_MT_maritime_upgraded
-#					add_council_agenda_progress_percent = MT_agenda_progress
-#					clear_variable = MT_agenda_progress
-#				}
-#			}
-#		}
-#		weight = {
-#			factor = 10
-#		}
-#	}
-#	
-#	tradition_swap = {
-#		name = tr_mt_maritime_no_paragon_finish
-#		inherit_effects = no
-#		inherit_icon = yes
-#		inherit_name = yes
-#		trigger = {
-#			has_paragon_dlc = no
-#			has_overlord_dlc = yes
-#		}
-#		modifier = {
-#			country_enclave_capacity_add = 1
-#			ascension_perks_add = 1
-#		}
-#		weight = {
-#			factor = 10
-#		}
-#	}
-#	
-#	tradition_swap = {
-#		name = tr_mt_maritime_no_paragon_no_overlord_finish
-#		inherit_effects = no
-#		inherit_icon = yes
-#		inherit_name = yes
-#		trigger = {
-#			has_paragon_dlc = no
-#			has_overlord_dlc = no
-#		}
-#		modifier = {
-#			country_starbase_capacity_add = 2
-#			ascension_perks_add = 1
-#		}
-#		weight = {
-#			factor = 10
-#		}
-#	}
-#}
+tr_mt_maritime_finish = {
+	# Upgrade Agenda
+	custom_tooltip_with_modifiers = tr_mt_maritime_finish_desc
+	modifier = {
+		country_enclave_capacity_add = 1
+		ascension_perks_add = 1
+	}
+	
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_agenda_selected = agenda_MT_maritime
+				}
+				set_variable = {
+					which = MT_agenda_progress
+					value = trigger:council_agenda_progress_percent
+				}
+				set_council_agenda = agenda_MT_maritime_upgraded
+				add_council_agenda_progress_percent = MT_agenda_progress
+				clear_variable = MT_agenda_progress
+			}
+		}
+	}
+	
+	tradition_swap = {
+		name = tr_mt_maritime_overlord_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_overlord_dlc = no
+			has_paragon_dlc = yes
+		}
+		custom_tooltip_with_modifiers = tr_mt_maritime_finish_desc
+		modifier = {
+			country_starbase_capacity_add = 2
+			ascension_perks_add = 1
+		}
+		on_enabled = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_agenda_selected = agenda_MT_maritime
+					}
+					set_variable = {
+						which = MT_agenda_progress
+						value = trigger:council_agenda_progress_percent
+					}
+					set_council_agenda = agenda_MT_maritime_upgraded
+					add_council_agenda_progress_percent = MT_agenda_progress
+					clear_variable = MT_agenda_progress
+				}
+			}
+		}
+		weight = {
+			factor = 10
+		}
+	}
+	
+	tradition_swap = {
+		name = tr_mt_maritime_no_paragon_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_paragon_dlc = no
+			has_overlord_dlc = yes
+		}
+		modifier = {
+			country_enclave_capacity_add = 1
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 10
+		}
+	}
+	
+	tradition_swap = {
+		name = tr_mt_maritime_no_paragon_no_overlord_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_paragon_dlc = no
+			has_overlord_dlc = no
+		}
+		modifier = {
+			country_starbase_capacity_add = 2
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 10
+		}
+	}
+}
 #
 ## 
-#tr_mt_maritime_industrial_contracts = {
-#	
-#	possible = {
-#		has_tradition = tr_mt_maritime_port_of_call
-#	}
-#	
-#	custom_tooltip = tr_mt_maritime_industrial_contracts_desc
-#
-#	triggered_modifier = {
-#		potential = { always = yes }
-#		country_traditions_alloys_produces_add = 0.02
-#		mult = value:mt_trade_value
-#	}
-#
-#	ai_weight = {
-#		factor = 1000
-#	}
-#}
+tr_mt_maritime_industrial_contracts = {
+	
+	possible = {
+		has_tradition = tr_mt_maritime_port_of_call
+	}
+	
+	custom_tooltip = tr_mt_maritime_industrial_contracts_desc
+
+	triggered_modifier = {
+		potential = { always = yes }
+		country_traditions_alloys_produces_add = 0.02
+		mult = value:mt_trade_value
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
 #
 ##  
-#tr_mt_maritime_merchant_navy = {
-#	
-#	possible = {
-#		has_tradition = tr_mt_maritime_port_of_call
-#	}
-#	
-#	modifier = {
-#		job_MT_marine_per_pop = 0.05
-#	}
-#
-#	ai_weight = {
-#		factor = 1000
-#	}
-#}
-#
-## 
-#tr_mt_maritime_grand_harbors = {
-#	
-#	custom_tooltip = tr_mt_maritime_grand_harbors_desc # Unlocks the marine harbor building
-#
-#	ai_weight = {
-#		factor = 1000
-#	}
-#}
+tr_mt_maritime_merchant_navy = {
+	
+	possible = {
+		has_tradition = tr_mt_maritime_port_of_call
+	}
+	
+	modifier = {
+		planet_soldiers_trade_produces_add = 2
+		#job_MT_marine_per_pop = 0.05
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
 #
 ## 
-#tr_mt_maritime_war_and_peace = {
-#	
-#	possible = {
-#		has_tradition = tr_mt_maritime_port_of_call
-#	}
-#	
-#	custom_tooltip = tr_mt_maritime_war_and_peace_desc # Unlocks war and peace policy
-#
-#	ai_weight = {
-#		factor = 1000
-#	}
-#}
+tr_mt_maritime_grand_harbors = {
+	
+	custom_tooltip = tr_mt_maritime_grand_harbors_desc # Unlocks the marine harbor building
+
+	ai_weight = {
+		factor = 1000
+	}
+}
 #
 ## 
-#tr_mt_maritime_port_of_call = {
-#	
-#	possible = {
-#		has_tradition = tr_mt_maritime_grand_harbors
-#	}
-#	
-#	modifier = {
-#		country_starbase_capacity_add = 4
-#		starbase_defense_platform_capacity_add = 4
-#	}
+tr_mt_maritime_war_and_peace = {
+	
+	possible = {
+		has_tradition = tr_mt_maritime_port_of_call
+	}
+	
+	custom_tooltip = tr_mt_maritime_war_and_peace_desc # Unlocks war and peace policy
+
+	ai_weight = {
+		factor = 1000
+	}
+}
 #
-#	ai_weight = {
-#		factor = 1000
-#	}
-#}
+## 
+tr_mt_maritime_port_of_call = {
+	
+	possible = {
+		has_tradition = tr_mt_maritime_grand_harbors
+	}
+	
+	modifier = {
+		country_starbase_capacity_add = 4
+		starbase_defense_platform_capacity_add = 4
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
 #

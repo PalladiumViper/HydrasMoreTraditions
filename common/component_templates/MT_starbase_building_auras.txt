@@ -172,6 +172,9 @@ utility_component_template = {
 						is_country_type = synth_queen_outposts
 						has_ascension_perk = ap_become_the_crisis
 						has_ascension_perk = ap_cosmogenesis
+						has_ascension_perk = ap_behemoths
+						has_origin = origin_endbringers
+						has_covenant = end_of_the_cycle
 					}
 				}
 			}

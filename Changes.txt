@@ -480,3 +480,16 @@ Bugfixes:
 - reenabled archaology event triggers.
 - Fixed ruination to use regular minor jobs instead of non-existent scrap miners.
 - Added astro-mining bays to the effects of the beaming array, so astro-mining drones can also benefit.
+
+# 4.1.x Some random changes
+- Put archaeology and curiosity events in own file as part of effort to make this mod easier to maintain.
+- Antiquity Finisher changed from statecraft research speed and draw chance to historical specimen output bonus. Relic cost reduction if grand archive is disabled
+- Antiquity Opener no longer disabled once a precursor has been found (Reason: Modded Precursor Compatiability). Also removed anomaly discovery chance and increased survey speed bonus to better fit all precursors.
+- Antiquity Precursor Bonuses should work more correctly now.
+- Re-enabled Curiosity. Museums replaced by increased chance for astral rift spawning. Agenda now has a chance to spawn an astral scar upon completion.
+- Fixed Industry Finisher
+- Fixed Industry Domestic Nanofabrication description
+- Re-enabled Desperation. Museums replaced by research options.
+- Fixed Ruination Bombardment Stance
+- Re-enabled Maritime. No longer grants merchant marine jobs and instead gives trade value to soldiers. If paradox ever makes it possible to add job swaps without overwrites, Merchant Marines will return, but until now they sadly will just be soldiers.
+- Changed precursor rewards from antiquity for Cybrex, Zroni and Baol to no longer give technology (Didn't work if picked before finding the precursor.)

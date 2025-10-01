@@ -43,9 +43,9 @@ tr_mt_industry_adopt = { # Theme: Industry districts and robots
 # 
 tr_mt_industry_finish = {
 	modifier = {
-		planet_translucers_produces_mult = 0.2
-		planet_chemists_produces_mult = 0.2
-		planet_refiners_produces_mult = 0.2
+		planet_metallurgists_rare_crystals_produces_mult = 0.2
+		planet_metallurgists_volatile_motes_produces_mult = 0.2
+		planet_metallurgists_exotic_gases_produces_mult = 0.2
 		ascension_perks_add = 1
 	}
 }

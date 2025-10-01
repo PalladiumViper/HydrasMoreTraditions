@@ -12,7 +12,6 @@ tradition_mt_curiosity = {
 	}
 
 	potential = {
-		always = no
 		has_astral_planes_dlc = yes
 		NOT = { has_global_flag = disabled_MT_curiosity }
 	}
@@ -26,6 +25,26 @@ tradition_mt_curiosity = {
 		modifier = {
 			factor = 3
 			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 10
+			is_dimensional_worship_empire = yes
+		}
+		modifier = {
+			factor = 10
+			has_origin = origin_riftworld
+		}
+		modifier = {
+			factor = 0
+			is_astral_rift_pool_empty = yes
+		}
+		modifier = {
+			factor = 0.1
+			astral_rifts_completed <= 2
+		}
+		modifier = {
+			factor = 0.5
+			astral_rifts_completed >= 5
 		}
 	}
 }

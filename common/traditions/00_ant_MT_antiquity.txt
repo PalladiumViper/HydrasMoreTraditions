@@ -1,36 +1,51 @@
 tr_mt_antiquity_adopt = {
 	unlocks_agenda = agenda_MT_antiquity
-	custom_tooltip = tr_mt_antiquity_adopt_desc
+	#custom_tooltip = tr_mt_antiquity_adopt_desc
 	modifier = {
-		science_ship_survey_speed = 0.1
-		ship_anomaly_generation_chance_mult = 0.2 # Metallichydra: Anomaly chance does not affect the chance of uncovering precursors # Scrap that, it does.
+		science_ship_survey_speed = 0.25
+		#ship_anomaly_generation_chance_mult = 0.2 # Metallichydra: Anomaly chance does not affect the chance of uncovering precursors # Scrap that, it does.
 	}
-	tradition_swap = {
-		name = tr_mt_antiquity_adopt_disabled
-		inherit_effects = no
-		inherit_icon = yes
-		inherit_name = yes
-		custom_tooltip = tr_mt_antiquity_adopt_desc
-		trigger = {
-			OR = {
-				has_relic = r_war_forge					# Cybrex
-				has_relic = r_pox_sample				# Irassian
-				has_relic = r_zro_crystal				# Zroni
-				has_relic = r_the_last_baol				# Baol
-				has_relic = r_reality_perforator		# Vultaum
-				has_relic = r_cryo_core					# Yuht
-				has_relic = r_weather_manipulator		# Inetian
-				has_relic = r_the_tempest_invocator		# adAkkaria
-			}
-		}
-	}
+	#tradition_swap = {
+	#	name = tr_mt_antiquity_adopt_disabled
+	#	inherit_effects = no
+	#	inherit_icon = yes
+	#	inherit_name = yes
+	#	custom_tooltip = tr_mt_antiquity_adopt_desc
+	#	trigger = {
+	#		OR = {
+	#			has_relic = r_war_forge					# Cybrex
+	#			has_relic = r_pox_sample				# Irassian
+	#			has_relic = r_zro_crystal				# Zroni
+	#			has_relic = r_the_last_baol				# Baol
+	#			has_relic = r_reality_perforator		# Vultaum
+	#			has_relic = r_cryo_core					# Yuht
+	#			has_relic = r_weather_manipulator		# Inetian
+	#			has_relic = r_the_tempest_invocator		# adAkkaria
+	#		}
+	#	}
+	#}
 }
 
 tr_mt_antiquity_finish = {
 	modifier = {
-		category_statecraft_research_speed_mult = 0.20
-		category_statecraft_draw_chance_mult = 0.5
+		#category_statecraft_research_speed_mult = 0.20
+		#category_statecraft_draw_chance_mult = 0.5
+		historical_item_specimens_produces_mult = 0.5
 		ascension_perks_add = 1
+	}
+	
+	tradition_swap = {
+		name = tr_mt_antiquity_finish_no_archive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_grand_archive_dlc = no
+		}
+		modifier = {
+			relics_cost_mult = -0.25
+			ascension_perks_add = 1
+		}
 	}
 }
 
@@ -122,12 +137,13 @@ tr_mt_antiquity_5 = {
 		}
 		modifier = {
 			planet_jobs_unity_produces_mult = 0.2
+			ship_armor_hardening_add = 0.25
 		}
-		on_enabled = {
-			hidden_effect = {
-				add_research_option = tech_combat_computers_autonomous
-			}
-		}
+		#on_enabled = {
+		#	hidden_effect = {
+		#		add_research_option = tech_combat_computers_autonomous
+		#	}
+		#}
 	}
 	tradition_swap = {
 		name = tr_mt_antiquity_5_cybrex_initial
@@ -137,6 +153,7 @@ tr_mt_antiquity_5 = {
 		custom_tooltip = tr_mt_antiquity_5_cybrex_initial_desc
 		trigger = {
 			has_country_flag = cybrex_intro
+			NOT = { has_country_flag = cybrex_world_found }
 		}
 		modifier = {
 			ship_anomaly_research_speed_mult = 0.2
@@ -166,6 +183,7 @@ tr_mt_antiquity_5 = {
 		custom_tooltip = tr_mt_antiquity_5_first_league_initial_desc
 		trigger = {
 			has_country_flag = first_league_intro
+			NOT = { has_country_flag = league_world_found }
 		}
 		modifier = {
 			ship_anomaly_research_speed_mult = 0.2
@@ -195,6 +213,7 @@ tr_mt_antiquity_5 = {
 		custom_tooltip = tr_mt_antiquity_5_irassian_initial_desc
 		trigger = {
 			has_country_flag = irassian_intro
+			NOT = { has_country_flag = irassian_world_found }
 		}
 		modifier = {
 			ship_anomaly_research_speed_mult = 0.2
@@ -223,7 +242,8 @@ tr_mt_antiquity_5 = {
 		inherit_name = no
 		custom_tooltip = tr_mt_antiquity_5_vultaum_initial_desc
 		trigger = {
-			has_country_flag = vultaum_1
+			has_country_flag = vultaum_intro
+			NOT = { has_country_flag = vultaum_world_found }
 		}
 		modifier = {
 			ship_anomaly_research_speed_mult = 0.2
@@ -253,6 +273,7 @@ tr_mt_antiquity_5 = {
 		custom_tooltip = tr_mt_antiquity_5_yuht_initial_desc
 		trigger = {
 			has_country_flag = yuht_intro
+			NOT = { has_country_flag = yuht_world_found }
 		}
 		modifier = {
 			ship_anomaly_research_speed_mult = 0.2
@@ -271,6 +292,7 @@ tr_mt_antiquity_5 = {
 		}
 		modifier = {
 			country_sr_zro_produces_mult = 1
+			ship_shield_hardening_add = 0.25
 		}
 	}
 	tradition_swap = {
@@ -281,15 +303,16 @@ tr_mt_antiquity_5 = {
 		custom_tooltip = tr_mt_antiquity_5_zroni_initial_desc
 		trigger = {
 			has_country_flag = zroni_intro
+			NOT = { has_country_flag = last_zroni_system }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1
 		}
-		on_enabled = {
-			hidden_effect = {
-				add_research_option = tech_precognition_interface
-			}
-		}
+		#on_enabled = {
+		#	hidden_effect = {
+		#		add_research_option = tech_precognition_interface
+		#	}
+		#}
 	}
 
 	## BAOL
@@ -304,12 +327,13 @@ tr_mt_antiquity_5 = {
 		}
 		modifier = {
 			country_trust_cap_add = 50
+			planet_farmers_produces_mult = 0.2
 		}
-		on_enabled = {
-			hidden_effect = {
-				add_research_option = tech_housing_agrarian_idyll
-			}
-		}
+		#on_enabled = {
+		#	hidden_effect = {
+		#		add_research_option = tech_housing_agrarian_idyll
+		#	}
+		#}
 	}
 	tradition_swap = {
 		name = tr_mt_antiquity_5_baol_initial
@@ -319,6 +343,7 @@ tr_mt_antiquity_5 = {
 		custom_tooltip = tr_mt_antiquity_5_baol_initial_desc
 		trigger = {
 			has_country_flag = baol_intro
+			NOT = { has_country_flag = last_baol_system }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1
@@ -348,6 +373,7 @@ tr_mt_antiquity_5 = {
 		custom_tooltip = tr_mt_antiquity_5_adakkaria_initial_desc
 		trigger = {
 			has_country_flag = adakkaria_intro
+			NOT = { has_country_flag = adakkaria_world_found }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1
@@ -377,6 +403,7 @@ tr_mt_antiquity_5 = {
 		custom_tooltip = tr_mt_antiquity_5_inetian_initial_desc
 		trigger = {
 			has_country_flag = inetian_intro
+			NOT = { has_country_flag = completed_inetian_traders_precursor }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1

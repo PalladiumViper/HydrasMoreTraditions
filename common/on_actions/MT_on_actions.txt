@@ -39,15 +39,22 @@ on_debris_scavenged_and_researched = {
 	}
 }
 
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		MT_curiosity.1 # Extra Astral Rifts
+	}
+}
+
 on_decade_pulse_country = {
 	events = {
-		MT_events.4 # arcsite spawn
+		MT_archaeology.2 # arcsite spawn / Finisher
 	}
 }
 
 on_arch_site_finished = {
 	events = {
-		MT_events.5 # Archaeology tradition
+		MT_archaeology.1 # Media Coverage
 	}
 }
 
@@ -112,7 +119,7 @@ on_pop_purged = {
 on_added_to_leader_pool = {
 	events = {
 		MT_events.19 # Piracy Privateers (Material Liberator Trait)
-		#MT_events.75 # Archeology Private Collector Appropriation (Archeologist trait)
+		MT_archaeology.3 # Archeology Private Collector Appropriation (Archeologist trait)
 		#MT_events.27 # Mystic Messengers
 		MT_events.97 # Cosmopolitan external leaders get extra trait
 	}
@@ -227,7 +234,7 @@ on_ship_destroyed_perp = {
 		MT_events.39 # Bulwark Kill Ship
 		MT_events.70 # Legion Perfection
 		MT_events.73 # Vengeance Glee
-		MT_events.104 # Desperation Finisher
+		MT_desperation.3 # Desperation Finisher
 	}
 }
 
@@ -301,7 +308,7 @@ on_system_lost = {
 	events = {
 		MT_events.60
 		MT_events.83
-		MT_events.103
+		MT_desperation.2
 	}
 }
 
@@ -312,7 +319,7 @@ on_system_gained = {
 	events = {
 		MT_events.59
 		MT_events.82
-		MT_events.102
+		MT_desperation.1
 	}
 }
 
@@ -374,7 +381,7 @@ on_operation_finished = {
 # THIS = AstralRift: spawned astral rift
 on_astral_rift_spawned = {
 	events = {
-		MT_events.54 # Call of the unknown, curiosity, gain physics research
+		MT_curiosity.2 # Call of the unknown, curiosity, gain physics research
 	}
 }
 
@@ -384,7 +391,7 @@ on_astral_rift_spawned = {
 # FROMFROM = Exploring Fleet
 on_astral_rift_exploration_complete = {
 	events = {
-		MT_events.55 # Unity when completing rift
+		MT_curiosity.3 # Unity when completing rift
 	}
 }
 

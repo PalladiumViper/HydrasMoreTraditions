@@ -1,26 +1,26 @@
-#tradition_mt_maritime = {
-#	desc = tradition_mt_maritime_desc
-#	tree_template = "MT_tree_113"
-#	adoption_bonus = "tr_mt_maritime_adopt"
-#	finish_bonus = "tr_mt_maritime_finish"
-#	traditions = {
-#		"tr_mt_maritime_grand_harbors" # 
-#		"tr_mt_maritime_industrial_contracts" # 
-#		"tr_mt_maritime_merchant_navy" # 
-#		"tr_mt_maritime_war_and_peace" # 
-#		"tr_mt_maritime_port_of_call" # 
-#	}
-#
-#	potential = {
-#		is_homicidal = no
-#		is_gestalt = no
-#		NOT = {
-#			has_valid_civic = civic_inwards_perfection
-#		}
-#		NOT = { has_global_flag = disabled_MT_maritime }
-#	}
-#
-#	ai_weight = {
-#		weight = 0
-#	}
-#}
+tradition_mt_maritime = {
+	desc = tradition_mt_maritime_desc
+	tree_template = "MT_tree_113"
+	adoption_bonus = "tr_mt_maritime_adopt"
+	finish_bonus = "tr_mt_maritime_finish"
+	traditions = {
+		"tr_mt_maritime_grand_harbors" # 
+		"tr_mt_maritime_industrial_contracts" # 
+		"tr_mt_maritime_merchant_navy" # 
+		"tr_mt_maritime_war_and_peace" # 
+		"tr_mt_maritime_port_of_call" # 
+	}
+
+	potential = {
+		is_homicidal = no
+		is_gestalt = no
+		NOT = {
+			has_valid_civic = civic_inwards_perfection
+		}
+		NOT = { has_global_flag = disabled_MT_maritime }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

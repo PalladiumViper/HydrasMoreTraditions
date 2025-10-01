@@ -692,25 +692,47 @@ agenda_MT_curiosity = {
 	modifier = {
 		ship_anomaly_generation_chance_mult = 0.25
 	}
+	effect = {
+		custom_tooltip = MT_curiosity_agenda_effect
+		hidden_effect = {
+			if = {
+				limit = {
+					is_astral_rift_pool_empty = no
+					any_system_within_border = {
+						can_spawn_astral_rift_natural_generation = yes
+					}
+				}
+				random_system_within_border = {
+					limit = {
+						can_spawn_astral_rift_natural_generation = yes
+					}
+					random = {
+						chance = 75
+						spawn_astral_scar = yes
+					}
+				}
+			}
+		}
+	}
 	finish_modifier = agenda_MT_curiosity_finish # 
 }
 
 # sloth
-agenda_MT_sloth = {
-	agenda_cost = @base_tradition_agenda_cost
-	allow = {
-		#has_tradition = tr_mt_sloth_adopt
-		always = no
-	}
-	potential = {
-		has_paragon_dlc = yes
-		always = no
-	}
-	modifier = {
-		ship_friendly_territory_shield_mult = 0.1
-	}
-	finish_modifier = agenda_MT_sloth_finish # 
-}
+#agenda_MT_sloth = {
+#	agenda_cost = @base_tradition_agenda_cost
+#	allow = {
+#		#has_tradition = tr_mt_sloth_adopt
+#		always = no
+#	}
+#	potential = {
+#		has_paragon_dlc = yes
+#		always = no
+#	}
+#	modifier = {
+#		ship_friendly_territory_shield_mult = 0.1
+#	}
+#	finish_modifier = agenda_MT_sloth_finish # 
+#}
 
 # industry
 agenda_MT_industry = {
@@ -1091,41 +1113,41 @@ agenda_MT_ruination = {
 }
 
 # Maritime
-#agenda_MT_maritime = {
-#	agenda_cost = @base_tradition_agenda_cost
-#	allow = {
-#		has_tradition = tr_mt_maritime_adopt
-#	}
-#	potential = {
-#		has_paragon_dlc = yes
-#		NOT = {
-#			has_tradition = tr_mt_maritime_finish
-#		}
-#	}
-#	modifier = {
-#		country_trade_produces_mult = -0.25
-#		ships_logistics_mult = -0.1
-#	}
-#	finish_modifier = agenda_MT_maritime_finish # 
-#}
+agenda_MT_maritime = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_mt_maritime_adopt
+	}
+	potential = {
+		has_paragon_dlc = yes
+		NOT = {
+			has_tradition = tr_mt_maritime_finish
+		}
+	}
+	modifier = {
+		country_trade_produces_mult = -0.25
+		ships_logistics_mult = -0.1
+	}
+	finish_modifier = agenda_MT_maritime_finish # 
+}
 
 # Maritime
-#agenda_MT_maritime_upgraded = {
-#	agenda_cost = @base_tradition_agenda_cost
-#	allow = {
-#		has_tradition = tr_mt_maritime_finish
-#	}
-#	potential = {
-#		has_paragon_dlc = yes
-#		has_tradition = tr_mt_maritime_finish
-#	}
-#	modifier = {
-#		country_trade_produces_mult = -0.05
-#		#ships_upkeep_mult = -0.1 # test
-#		ships_logistics_mult = -0.2
-#	}
-#	finish_modifier = agenda_MT_maritime_upgraded_finish # 
-#}
+agenda_MT_maritime_upgraded = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_mt_maritime_finish
+	}
+	potential = {
+		has_paragon_dlc = yes
+		has_tradition = tr_mt_maritime_finish
+	}
+	modifier = {
+		country_trade_produces_mult = -0.05
+		#ships_upkeep_mult = -0.1 # test
+		ships_logistics_mult = -0.2
+	}
+	finish_modifier = agenda_MT_maritime_upgraded_finish # 
+}
 
 # Centralization
 agenda_MT_core = {

@@ -244,60 +244,85 @@
 # Marines #
 ###########
 
-#mt_building_marine_harbor = {
-#	base_buildtime = @b1_time
-#
-#	can_be_ruined = no
-#	category = army
-#
-#	base_cap_amount = 1
-#
-#	potential = {
-#		exists = owner
-#		owner = { has_tradition = tr_mt_maritime_grand_harbors }
-#		NOT = { has_modifier = slave_colony }
-#		owner = { is_ai = no }
-#	}
-#
-#	building_sets = {
-#		government
-#		fortress
-#	}
-#
-#	triggered_planet_modifier = {
-#		potential = {
-#			always = yes
-#		}
-#		modifier = {
-#			job_MT_marine_add = 100
-#			job_soldier_add = -100
-#		}
-#		mult = value:MT_num_marine_convert
-#	}
-#	
-#	planet_modifier = {
-#		job_merchant_add = 100
-#	}
-#	
-#	resources = {
-#		category = planet_buildings_strongholds
-#
-#		# Base cost
-#		cost = {
-#			minerals = 500
-#		}
-#
-#		# Base upkeep
-#		upkeep = {
-#			energy = 2
-#		}
-#	}
-#
-#	triggered_desc = {
-#		trigger = {
-#			exists = owner
-#			owner = { is_regular_empire = yes }
-#		}
-#		text = job_MT_marine_effect_desc
-#	}
-#}
+mt_building_marine_harbor = {
+	base_buildtime = @b1_time
+
+	can_be_ruined = no
+	category = army
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = { has_tradition = tr_mt_maritime_grand_harbors }
+		NOT = { has_modifier = slave_colony }
+		owner = { is_ai = no }
+	}
+
+	building_sets = {
+		government
+		fortress
+	}
+
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		always = yes
+	#	}
+	#	modifier = {
+	#		job_MT_marine_add = 100
+	#		job_soldier_add = -100
+	#	}
+	#	mult = value:MT_num_marine_convert
+	#}
+	
+	planet_modifier = {
+		job_soldier_add = 400
+	}
+	
+	resources = {
+		category = planet_buildings_strongholds
+
+		# Base cost
+		cost = {
+			minerals = 500
+		}
+
+		# Base upkeep
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_mt_maritime_grand_harbors
+			}
+		}
+		modifier = {
+			pop_soldier_bonus_workforce_mult = 0.01
+		}
+		mult = value:MT_soldier_trader_bonus
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_tradition = tr_mt_maritime_grand_harbors
+			}
+		}
+		text = MT_marine_harbor_effect
+	}
+	
+	#desc = MT_marine_harbor_effect
+
+	#triggered_desc = {
+	#	trigger = {
+	#		exists = owner
+	#		owner = { is_regular_empire = yes }
+	#	}
+	#	text = job_MT_marine_effect_desc
+	#}
+}

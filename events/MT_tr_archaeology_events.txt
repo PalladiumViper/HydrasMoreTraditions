@@ -1,0 +1,122 @@
+namespace = MT_archaeology
+
+# AAA.28
+# archeology tradition arcsite finish extra reward
+fleet_event = {
+	id = MT_archaeology.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_tradition = tr_mt_archeology_respect_the_dead
+		}
+	}
+
+	immediate = {
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 8 #12
+				min = 150
+				max = 100000
+			}
+		}
+	}
+}
+
+# AAA.22
+# random archeology site from archeology finisher
+country_event = {
+	id = MT_archaeology.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_tradition = tr_mt_archeology_finish
+	}
+
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				habitable_planet = no
+				is_artificial = no
+				NOR = {
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					exists = archaeological_site
+					has_planet_flag = suppress_archaeological_sites
+					solar_system = {
+						has_star_flag = suppress_archaeological_sites
+					}
+				}
+			}
+			save_event_target_as = chosen_planet
+			event_target:chosen_planet = { 
+				prevent_anomaly = yes
+				create_archaeological_site = random
+			}
+		}
+	}
+}
+
+country_event = { # Archeology Archeologist / FROM = Leader
+	id = MT_archaeology.3
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = spawning_renowned_leader }
+		exists = owner
+		has_tradition = tr_mt_archeology_private_collector_appropriation
+		is_country_type = default
+		FROM = {
+			leader_class = scientist
+		}
+	}
+
+	immediate = {
+		FROM = {
+			if = {
+				limit = {
+					leader_class = scientist
+					NOR = {
+						has_trait = leader_trait_archaeologist
+						has_trait = leader_trait_archaeologist_2
+					}
+				}
+				add_trait = {
+					trait = leader_trait_archaeologist
+					show_message = no
+				}
+			}
+			else_if = {
+				limit = {
+					leader_class = scientist
+					has_trait = leader_trait_archaeologist
+					NOT = { has_trait = leader_trait_archaeologist_2 }
+				}
+				remove_trait = leader_trait_archaeologist
+				add_trait = {
+					trait = leader_trait_archaeologist_2
+					show_message = no
+				}
+			}
+			else = {
+				limit = {
+					leader_class = scientist
+					has_trait = leader_trait_archaeologist_2
+				}
+				add_trait = {
+					trait = random_common
+					show_message = no
+				}
+			}
+		}
+	}
+}

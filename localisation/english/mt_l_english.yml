@@ -424,7 +424,7 @@
  
  tr_mt_annihilation_beauty_of_annihilation: "Beauty of Annihilation"
  tr_mt_annihilation_beauty_of_annihilation_delayed: "Their pleas for mercy, their crying and liquid flow from their optical sensors and their horrified screaming when they realize their prayers will not be answered is the sweetest music."
- tr_mt_annihilation_beauty_of_annihilation_desc: "Gain 1 month worth of £unity£ §YUnity§! when we kill a £pop£ Pop through §YOrbital Bombardment§!."
+ tr_mt_annihilation_beauty_of_annihilation_desc: "Gain 1 month worth of £unity£ §YUnity§! for every £pop£ §Y100 Pops§! we kill through §YOrbital Bombardment§!."
  tr_mt_annihilation_beauty_of_annihilation_necromancers: "Beauty of Annihilation"
  tr_mt_annihilation_beauty_of_annihilation_necromancers_delayed: "One life. One Death. Five lifetimes of work to be done."
  tr_mt_annihilation_beauty_of_annihilation_necromancers_desc: "Purged organic §YPops§! £pop£ have a 20% chance of returning as zombies."
@@ -1022,6 +1022,7 @@
  council_agenda_agenda_MT_curiosity_name: "Unchecked Theories"
  council_agenda_agenda_MT_curiosity_desc: "New theories always spring up, especially during times like these. We must make sure all of them have been tested and verified."
  agenda_MT_curiosity_finish: "Unchecked Theories"
+ MT_curiosity_agenda_effect: "High chance of creating an §YAstral Scar§! in an owned system."
  tradition_mt_curiosity_desc: "The universe is full of wonders, and we wish to see it all."
  
  tr_mt_curiosity_siphon: "Astral Siphon"
@@ -1035,12 +1036,15 @@
  #tr_mt_archeology_museums_delayed: "By carefully replicating our precursor artifacts with holographic technology, citizens can see galactic history unfold before their very eyes. This newfound fascination with the past is fueling a surge in historical curiosity."
  #tr_mt_archeology_museums_modifier_desc: "§YUnlocks Building:§! $mt_building_museum$\n§YHolo-Museum§! gains a §Y[GetMTCustodianType]§! Job."
  
- tr_mt_curiosity_bright_ideas: "Holographic Displays"
- tr_mt_curiosity_bright_ideas_desc: "§YUnlocks Building:§! $mt_building_museum$\n§YHolo-Museum§! gains an §Y$job_MT_astral_custodian$§! Job."
- tr_mt_curiosity_bright_ideas_delayed: "Lifelike holographic displays enables a peek into the wonders beyond our own dimension. The increased interest and understanding of other dimensions among the average citizen has also helped drive up the return on investment when implementing technologies and techniques from alternate realities."
+ #tr_mt_curiosity_bright_ideas: "Holographic Displays"
+ tr_mt_curiosity_bright_ideas: "New Frontiers"
+ tr_mt_curiosity_bright_ideas_delayed: "With the advent of a new final frontier, we are ever eager to find ways to go there."
+ tr_mt_curiosity_bright_ideas_desc: "$civic_dimensional_worship_effects_additional$"
+ #tr_mt_curiosity_bright_ideas_desc: "§YUnlocks Building:§! $mt_building_museum$\n§YHolo-Museum§! gains an §Y$job_MT_astral_custodian$§! Job."
+ #tr_mt_curiosity_bright_ideas_delayed: "Lifelike holographic displays enables a peek into the wonders beyond our own dimension. The increased interest and understanding of other dimensions among the average citizen has also helped drive up the return on investment when implementing technologies and techniques from alternate realities."
  
- tr_mt_curiosity_bright_ideas_machine: "New Information"
- tr_mt_curiosity_bright_ideas_machine_delayed: "Each new reality that we explore brings new information, most of which can be analyzed for many cycles before all of its secrets have been decrypted."
+ #tr_mt_curiosity_bright_ideas_machine: "New Information"
+ #tr_mt_curiosity_bright_ideas_machine_delayed: "Each new reality that we explore brings new information, most of which can be analyzed for many cycles before all of its secrets have been decrypted."
  
  tr_mt_curiosity_rapid_simulation: "Extensive Simulations"
  tr_mt_curiosity_rapid_simulation_delayed: "Extensive simulated explorations of alternative realities will be conducted, both past and ongoing, to ensure the absolute safety of those who venture into the unknown."
@@ -1315,7 +1319,8 @@
  
  tr_mt_antiquity_5_cybrex_initial: "Databanks of the $cybrex_precursor_civ$"
  tr_mt_antiquity_5_cybrex_initial_delayed: "Having identified the existence of the $cybrex_precursor_civ$, our [Owner.GetScientistPluralCapital] can begin piecing together a history formerly lost to time."
- tr_mt_antiquity_5_cybrex_initial_desc: "§HWhile searching for the $cybrex_precursor_civ$ $TRIGGER_HOME_PLANET$§!\n$MOD_SHIP_ANOMALY_RESEARCH_SPEED$: §G+15%§!\n\n§HAfter having found the $cybrex_precursor_civ$ $TRIGGER_HOME_PLANET$§!\n$mod_planet_jobs_unity_produces_mult$: §G+20%§!\n§YResearch Option Gained:§!\n['technology:tech_combat_computers_autonomous']"
+ tr_mt_antiquity_5_cybrex_initial_desc: "§HWhile searching for the $cybrex_precursor_civ$ $TRIGGER_HOME_PLANET$§!\n$MOD_SHIP_ANOMALY_RESEARCH_SPEED$: §G+15%§!\n\n§HAfter having found the $cybrex_precursor_civ$ $TRIGGER_HOME_PLANET$§!\n$mod_planet_jobs_unity_produces_mult$: §G+20%§!\n$MOD_SHIP_ARMOR_HARDENING_ADD$: §G+25%§!"
+ #\n§YResearch Option Gained:§!\n['technology:tech_combat_computers_autonomous']"
 
  tr_mt_antiquity_5_cybrex: "Databanks of the $cybrex_precursor_civ$"
  tr_mt_antiquity_5_cybrex_delayed: "The $cybrex_precursor_civ$ are an abject lesson in the dangers of both synthetic and organic life. The unity previously held by this singular group consciousness was clearly both a strength and a weakness, something we can undoubtably learn from."
@@ -1355,7 +1360,8 @@
 
  tr_mt_antiquity_5_zroni_initial: "Memoirs of the $NAME_Zroni$"
  tr_mt_antiquity_5_zroni_initial_delayed: "Having identified the existence of the $NAME_Zroni$, our [Owner.GetScientistPluralCapital] can begin piecing together a history formerly lost to time."
- tr_mt_antiquity_5_zroni_initial_desc: "§HWhile searching for the $NAME_Zroni$ $TRIGGER_HOME_PLANET$§!\n$MOD_SHIP_ARCHAEOLOGICAL_SITE_CLUES_ADD$: §G+1§!\n\n§HAfter having found the $NAME_Zroni$ $TRIGGER_HOME_PLANET$§!\n$mod_country_sr_zro_produces_mult$: §G+100%§!\n§YResearch Option Gained:§!\n['technology:tech_precognition_interface']"
+ tr_mt_antiquity_5_zroni_initial_desc: "§HWhile searching for the $NAME_Zroni$ $TRIGGER_HOME_PLANET$§!\n$MOD_SHIP_ARCHAEOLOGICAL_SITE_CLUES_ADD$: §G+1§!\n\n§HAfter having found the $NAME_Zroni$ $TRIGGER_HOME_PLANET$§!\n$mod_country_sr_zro_produces_mult$: §G+100%§!\n$MOD_SHIP_SHIELD_HARDENING_ADD$: §G+25%§!"
+ #\n§YResearch Option Gained:§!\n['technology:tech_precognition_interface']"
 
  tr_mt_antiquity_5_zroni: "Memoirs of the $NAME_Zroni$"
  tr_mt_antiquity_5_zroni_delayed: "Even in passing, the $NAME_Zroni$ teach us lessons to be found nowhere else, their teachings of both psionics and the refusal of the Shroud leaves us with a conundrum of our own; is it morally right to use the endless well of power that is the Shroud?"
@@ -1363,7 +1369,8 @@
 
  tr_mt_antiquity_5_baol_initial: "Annals of the $NAME_Baol$"
  tr_mt_antiquity_5_baol_initial_delayed: "Having identified the existence of the $NAME_Baol$, our [Owner.GetScientistPluralCapital] can begin piecing together a history formerly lost to time."
- tr_mt_antiquity_5_baol_initial_desc: "§HWhile searching for the $NAME_Baol$ $TRIGGER_HOME_PLANET$§!\n$MOD_SHIP_ARCHAEOLOGICAL_SITE_CLUES_ADD$: §G+1§!\n\n§HAfter having found the $NAME_Baol$ $TRIGGER_HOME_PLANET$§!\n$MOD_COUNTRY_TRUST_CAP_ADD$: §G+50§!\n§YResearch Option Gained:§!\n['technology:tech_housing_agrarian_idyll']"
+ tr_mt_antiquity_5_baol_initial_desc: "§HWhile searching for the $NAME_Baol$ $TRIGGER_HOME_PLANET$§!\n$MOD_SHIP_ARCHAEOLOGICAL_SITE_CLUES_ADD$: §G+1§!\n\n§HAfter having found the $NAME_Baol$ $TRIGGER_HOME_PLANET$§!\n$MOD_COUNTRY_TRUST_CAP_ADD$: §G+50§!\n$mod_planet_farmers_produces_mult$: §G+20%§!"
+ #\n§YResearch Option Gained:§!\n['technology:tech_housing_agrarian_idyll']"
 
  tr_mt_antiquity_5_baol: "Annals of the $NAME_Baol$"
  tr_mt_antiquity_5_baol_delayed: "The unfortunate circumstances the $NAME_Baol$ found themselves in shed a blinding light on the inequal origins of each sentient species. Are we to shepherd those who were destined to fail into a brighter future or is it morally right to trample them as our empire ascends to preeminent power?"
@@ -1929,7 +1936,7 @@
  
  tr_mt_industry_bigger_batches: "Domestic Nanofabrication"
  tr_mt_industry_bigger_batches_delayed: "Recent innovation in the art of nanofabrication has provided us with easy to use, compact at-home appliances of formerly heavy industrial machinery. Local artisans and regular citizens alike may now use this technology to attempt to create anything their minds can dream of."
- tr_mt_industry_bigger_batches_tt: "§KIf picked before ['tradition:tr_mt_industry_multilayered']§!\n$mod_planet_artisans_consumer_goods_produces_add$: §G+0.50§!\n$mod_planet_jobs_consumer_goods_upkeep_mult$: §G-5%§!\n\n§KIf picked before ['tradition:tr_mt_industry_multilayered']§!\n$tr_mt_industry_agriculture_tt$"
+ tr_mt_industry_bigger_batches_tt: "§KIf picked before ['tradition:tr_mt_industry_multilayered']§!\n$mod_planet_artisans_consumer_goods_produces_add$: §G+0.50§!\n$mod_planet_jobs_consumer_goods_upkeep_mult$: §G-5%§!\n\n§KIf picked after ['tradition:tr_mt_industry_multilayered']§!\n$tr_mt_industry_agriculture_tt$"
  tr_mt_industry_bigger_batches_lithoid_tt: "§KIf picked before ['tradition:tr_mt_industry_multilayered']§!\n$mod_planet_artisans_consumer_goods_produces_add$: §G+0.50§!\n$mod_planet_jobs_consumer_goods_upkeep_mult$: §G-5%§!\n\n§KIf picked after ['tradition:tr_mt_industry_multilayered']§!\n$tr_mt_industry_prospector_tt$"
  tr_mt_industry_bigger_batches_hive: "Organic Carbon Printing"
  tr_mt_industry_bigger_batches_hive_delayed: "Through methodically integrating existing carbon printing assemblies directly into our spawning pools, we can decrease the total nutrition required to gestate new drones by a significant margin."
@@ -2507,11 +2514,13 @@
  policy_MT_navy_draft_desc: "Our marines are very flexible, and can adapt to new conditions at a moments notice."
  
  MT_marine_traders: "Marine Traders"
- MT_marine_traders_desc: "Our Marines are encouraged to spend more resources and time on trades and deals.\n\n§E$job_MT_marine_plural$ provide +2 Trade Value and the cost of 1 Naval Capacity.§!"
+ MT_marine_traders_desc: "Our Marines are encouraged to spend more resources and time on trades and deals."
+ #\n\n§E$job_MT_marine_plural$ provide +2 Trade Value and the cost of 1 Naval Capacity.§!"
  MT_marine_marines: "Marine Mercenaries"
  MT_marine_marines_desc: "Our Marines are free to do as they see fit, so long as they make enough credits that we can get a good share of their credits through taxes."
  MT_marine_soldiers: "Marine Soldiers"
- MT_marine_soldiers_desc: "We cannot let capable soldiers .\n\n§E$job_MT_marine_plural$ provide +1 Naval Capacity and the cost of 2 Trade Value.§!"
+ MT_marine_soldiers_desc: "We cannot let capable soldiers waste their time and skills on idle haggling. All must be ready for combat at a moments notice."
+ #\n\n§E$job_MT_marine_plural$ provide +1 Naval Capacity and the cost of 2 Trade Value.§!"
  
  mt_marine_traders_name: "Marine Traders"
  mt_marine_marines_name: "Marines"
@@ -2522,12 +2531,12 @@
  mt_marine_soldiers: "Marine Soldiers"
  
  # Grand Harbors
- job_MT_marine_effect_desc: "Converts half of the §YSoldier Jobs§! from $building_stronghold$ and $building_fortress$ buildings into §Y$job_MT_marine$§! jobs"
+ #job_MT_marine_effect_desc: "Converts half of the §YSoldier Jobs§! from $building_stronghold$ and $building_fortress$ buildings into §Y$job_MT_marine$§! jobs"
  
  # Grand Harbors
  mt_building_marine_harbor: "Harbor Complex"
  mt_building_marine_harbor_desc: "A center of trade, specializing in the weapons industry. At the right price you can buy yourself a small private army, composed of elite mercenaries."
- 
+ MT_marine_harbor_effect: "$mod_pop_soldier_bonus_workforce_mult$ scales with [trader.GetIcon] [trader.GetName] Jobs."
  # Merchant Marines
  job_MT_marine: "Merchant Marine"
  job_MT_marine_plural: "Merchant Marines"
@@ -2535,9 +2544,9 @@
  job_MT_marine_effect_desc: "$job_MT_marine_plural$ turn $r_consumer_goods$ into $r_trade$, £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!, and additionally spawn £defense_army£ §YDefense Armies§!"
  zone_mt_maritime: "Logistics Harbour"
  zone_mt_maritime_desc: "Dedicated harbours for our ground-to-stellar logistics where there is no difference between mercenaries and government officials."
- mod_job_MT_marine_add: "$job_MT_marine$ Jobs"
- mod_job_MT_marine_per_pop: "§G+1§! $job_MT_marine$ Job per $VALUE$ Pops"
- mod_job_MT_marine_per_pop_short: "\n§G+1§! £mod_job_MT_marine_add£ per $VALUE$ £pop£"
+ #mod_job_MT_marine_add: "$job_MT_marine$ Jobs"
+ #mod_job_MT_marine_per_pop: "§G+1§! $job_MT_marine$ Job per $VALUE$ Pops"
+ #mod_job_MT_marine_per_pop_short: "\n§G+1§! £mod_job_MT_marine_add£ per $VALUE$ £pop£"
  
  MT_MARINE_JOB_TRIGGER: "This job can only be worked by Free Pops that are allowed to serve in the military."
  
@@ -3066,13 +3075,14 @@
  tr_mt_desperation_united_we_stand_xenophobe: "Self Reliance"
  tr_mt_desperation_united_we_stand_xenophobe_delayed: "We have no one to rely on but ourselves. The rest of the galaxy may burn but we will endure within our walls."
 
- tr_mt_desperation_emergency_waivers: "Crisis Quarantine"
- tr_mt_desperation_emergency_waivers_desc: "Any Ships in your systems:\n$t$$MOD_SHIP_BASE_SPEED_MULT$: §R-25%§!\nThis effect is §Ydoubled§! against crises and crisis-seeking empires"
- tr_mt_desperation_emergency_waivers_delayed: "We must delay the advance of existential threats until we have the means to defeat them."
+ tr_mt_desperation_emergency_waivers: "Desperate Search"
+ #tr_mt_desperation_emergency_waivers_desc: "Any Ships in your systems:\n$t$$MOD_SHIP_BASE_SPEED_MULT$: §R-25%§!\nThis effect is §Ydoubled§! against crises and crisis-seeking empires"
+ tr_mt_desperation_emergency_waivers_delayed: "All avenues of hope must be searched, each proverbial stone turned."
 
- tr_mt_desperation_records: "Lessons of Survival"
- tr_mt_desperation_records_delayed: "More than survival, it is our refusal to break that defines us. Each crisis we face will only make us grow more resilient."
- tr_mt_desperation_records_desc: "For every §YGalactic Crisis§! we endure, we gain a unique bonus.\n\n"
+ tr_mt_desperation_records: "Crisis Quarantine"
+ tr_mt_desperation_records_delayed: "We must delay the advance of existential threats until we have the means to defeat them."
+ tr_mt_desperation_records_desc: "Any Ships in your systems:\n$t$$MOD_SHIP_BASE_SPEED_MULT$: §R-25%§!\nThis effect is §Ydoubled§! against crises and crisis-seeking empires."
+ #For every §YGalactic Crisis§! we endure, we gain a unique bonus.\n\n"
 
 
  MT_Weak_Point_Analysis_Effect: "\n\nCurrent Effects:"

@@ -24,6 +24,7 @@
 		custom_tooltip = tr_mt_antiquity_5_ixardian_initial_desc
 		trigger = {
 			has_country_flag = ixardian_intro
+			NOT = { has_country_flag = ixardian_homeworld_system }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1
@@ -53,6 +54,7 @@
 		custom_tooltip = tr_mt_antiquity_5_werediran_initial_desc
 		trigger = {
 			has_country_flag = werediran_intro
+			NOT = { has_country_flag = werediran_home_system }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1
@@ -82,6 +84,7 @@
 		custom_tooltip = tr_mt_antiquity_5_ezentian_initial_desc
 		trigger = {
 			has_country_flag = ezentian_intro
+			NOT = { has_country_flag = ezentian_home_system }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1

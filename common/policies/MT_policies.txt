@@ -394,47 +394,60 @@ mt_forced_slavery = {
 	}
 }
 
-#MT_navy_draft = {
-#	potential = {
-#		has_tradition = tr_mt_maritime_war_and_peace
-#	}
-#
-#	option = {
-#		name = MT_marine_traders
-#		
-#		policy_flags = {
-#			mt_marine_traders
-#		}
-#		
-#		AI_weight = {
-#			factor = 0
-#		}
-#	}
-#
-#	option = {
-#		name = MT_marine_marines
-#
-#		policy_flags = {
-#			mt_marine_marines
-#		}
-#
-#		AI_weight = {
-#			factor = 10
-#		}
-#	}
-#
-#	option = {
-#		name = MT_marine_soldiers
-#
-#		policy_flags = {
-#			mt_marine_soldiers
-#		}
-#
-#		AI_weight = {
-#			factor = 0
-#		}
-#	}
-#}
+MT_navy_draft = {
+	potential = {
+		has_tradition = tr_mt_maritime_war_and_peace
+	}
+
+	option = {
+		name = MT_marine_traders
+		
+		policy_flags = {
+			mt_marine_traders
+		}
+		
+		modifier = {
+			country_trade_produces_mult = 0.2
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = MT_marine_marines
+
+		policy_flags = {
+			mt_marine_marines
+		}
+		
+		modifier = {
+			country_trade_produces_mult = 0.1
+			country_naval_cap_mult = 0.1
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = MT_marine_soldiers
+
+		policy_flags = {
+			mt_marine_soldiers
+		}
+		
+		modifier = {
+			country_naval_cap_mult = 0.1
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
 
 #MT_bio_processors = {
 #	potential = {

@@ -102,7 +102,7 @@ tr_mt_desperation_united_we_stand = {
 		has_tradition = tr_mt_desperation_weak_point_analysis
 	}
 	
-	custom_tooltip_with_modifiers = tr_mt_desperation_united_we_stand_desc # Gain +0.5% $mod_country_produces_mult$ for each year of peace, reaching maximum after 60 years
+	custom_tooltip_with_modifiers = tr_mt_desperation_united_we_stand_desc
 	
 	modifier = {
 		resolution_category_galactic_focus_vote_strength_mult = 0.5
@@ -140,19 +140,14 @@ tr_mt_desperation_united_we_stand = {
 # 
 tr_mt_desperation_emergency_waivers = {
 	
-	custom_tooltip = tr_mt_desperation_emergency_waivers_desc
+	#custom_tooltip = tr_mt_desperation_emergency_waivers_desc
 	
 	possible = {
 		has_tradition = tr_mt_desperation_weak_point_analysis
 	}
 	
-	on_enabled = {
-		hidden_effect = {
-			every_owned_starbase = {
-				limit = { is_normal_starbase = yes }
-				add_MT_desperation_aura = yes
-			}
-		}
+	modifier = {
+		num_tech_alternatives_add = 3
 	}
 	
 	#triggered_modifier = {
@@ -172,7 +167,16 @@ tr_mt_desperation_records = {
 		has_tradition = tr_mt_desperation_weak_point_analysis
 	}
 	
-	custom_tooltip = tr_mt_desperation_records_desc # Gain unity/influence/diplomatic weight for each guarantee independence
+	custom_tooltip = tr_mt_desperation_records_desc
+
+	on_enabled = {
+		hidden_effect = {
+			every_owned_starbase = {
+				limit = { is_normal_starbase = yes }
+				add_MT_desperation_aura = yes
+			}
+		}
+	}
 
 	ai_weight = {
 		factor = 1000

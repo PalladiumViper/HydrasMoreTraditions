@@ -21,6 +21,7 @@
 		custom_tooltip = tr_mt_antiquity_5_plexian_initial_desc
 		trigger = {
 			has_country_flag = plexi_intro
+			NOT = { has_country_flag = plexi_homeworld_system }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1
@@ -50,6 +51,7 @@
 		custom_tooltip = tr_mt_antiquity_5_lartian_initial_desc
 		trigger = {
 			has_country_flag = lartia_intro
+			NOT = { has_country_flag = lartia_home_system }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1

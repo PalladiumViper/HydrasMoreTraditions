@@ -67,19 +67,30 @@ tr_mt_curiosity_bright_ideas = {
 	#	country_councilor_physics_research_produces_add = 10
 	#	mult = trigger:astral_rifts_completed
 	#}
+	
+	#A tradition with 3 stages, increasing the bonus it gives?
+	#tradition_swap = {
+	#	name = tr_mt_curiosity_bright_ideas_1
+	#	inherit_effects = yes
+	#	inherit_icon = no
+	#	inherit_name = yes
+	#	trigger = {
+	#		is_gestalt = yes
+	#	}
+	#}
 
-	tradition_swap = {
-		name = tr_mt_curiosity_bright_ideas_machine
-		inherit_effects = yes
-		inherit_icon = yes
-		inherit_name = no
-		trigger = {
-			is_gestalt = yes
-		}
-		weight = {
-			factor = 1
-		}
-	}
+	#tradition_swap = {
+	#	name = tr_mt_curiosity_bright_ideas_machine
+	#	inherit_effects = yes
+	#	inherit_icon = yes
+	#	inherit_name = no
+	#	trigger = {
+	#		is_gestalt = yes
+	#	}
+	#	weight = {
+	#		factor = 1
+	#	}
+	#}
 
 	ai_weight = {
 		factor = 1000

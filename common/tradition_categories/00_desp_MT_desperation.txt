@@ -12,11 +12,12 @@ tradition_mt_desperation = {
 	}
 
 	potential = {
-		always = no
 		NOR = {
 			has_ascension_perk = ap_become_the_crisis
 			has_ascension_perk = ap_cosmogenesis
 			has_ascension_perk = ap_behemoths
+			has_origin = origin_endbringers
+			has_covenant = end_of_the_cycle
 		}
 		NOT = {
 			has_valid_civic = civic_inwards_perfection
@@ -44,6 +45,20 @@ tradition_mt_desperation = {
 				OR = {
 					has_ascension_perk = ap_become_the_crisis
 					has_ascension_perk = ap_cosmogenesis
+					has_ascension_perk = ap_behemoths
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			any_country = {
+				relative_power = {
+					who = prev
+					value > equivalent
+				}
+				OR = {
+					has_origin = origin_endbringers
+					has_covenant = end_of_the_cycle
 				}
 			}
 		}

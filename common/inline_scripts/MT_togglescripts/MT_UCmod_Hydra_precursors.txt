@@ -21,6 +21,7 @@
 		custom_tooltip = tr_mt_antiquity_5_volgan_initial_desc
 		trigger = {
 			has_country_flag = volgan_intro
+			NOT = { has_country_flag = volgan_homeworld_system }
 		}
 		modifier = {
 			ship_archaeological_site_clues_add = 1

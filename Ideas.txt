@@ -15,3 +15,17 @@ Authority / Oppression / Tyranny / Superiority
 
 Healthcare
 - Doctor output, Pop food upkeep increase (and happiness and pop growth increase)
+
+
+
+Changes Needed:
+- Archaeology
+	A bit boring and strange bonuses
+- Benevolence
+	Redistribute Bonuses (Less on Finisher)
+- Dominance
+	Some better modifiers and less influence-centric
+- Entraprenourship
+	Better Finisher
+- Malevolence
+	Fix bombardment text and effect
